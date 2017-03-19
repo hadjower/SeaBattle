@@ -1,0 +1,14 @@
+.gridpane{
+    -fx-background-image: url("/com/dudar/seabattle/pictures/startWindow.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 1024 600;
+    -fx-background-position: top left;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+
+.button {
+    /*-fx-opacity: 50%;*/
+    /*-fx-background-color: ActiveBorder;*/
+    /*-fx-background-color: transparent;*/
+    -fx-background-image: url("/com/dudar/seabattle/pictures/buttons/startButton.png");
+}

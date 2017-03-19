@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane onMouseMoved="#moveImg" styleClass="anchorpane" stylesheets="@../../css/userSetMode.css"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.dudar.seabattle.controller.UserSetShipModeWindowController">
+    <children>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0"
+              prefWidth="950.0">
+            <children>
+                <VBox prefHeight="550.0" prefWidth="27.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER"
+                              wrappingWidth="33.13671875">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets top="53.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER"
+                              wrappingWidth="33.13671875">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER"
+                              wrappingWidth="33.13671875">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER"
+                              wrappingWidth="33.13671875">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER"
+                              wrappingWidth="33.13671875">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="6" textAlignment="CENTER"
+                              wrappingWidth="33.13671875">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="7" textAlignment="CENTER"
+                              wrappingWidth="33.13671875">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="8" textAlignment="CENTER"
+                              wrappingWidth="33.13671875">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="9" textAlignment="CENTER"
+                              wrappingWidth="33.13671875">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER"
+                              wrappingWidth="33.13671875">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Text>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="10.0"/>
+                    </HBox.margin>
+                </VBox>
+                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                      prefHeight="550.0" prefWidth="435.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A   Б   В   Г   Д   Е   Ж   З   И   К"
+                              wrappingWidth="396.205078125">
+                            <font>
+                                <Font size="28.0"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets left="23.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Canvas fx:id="canvasField" height="432.0" width="410.0">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="40.0" top="5.0"/>
+                            </VBox.margin>
+                        </Canvas>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Button id="playButton" fx:id="btnPlay" mnemonicParsing="false" onAction="#startGame"
+                                        prefHeight="35.0" prefWidth="125.0" stylesheets="@../../css/userSetMode.css"
+                                        visible="false">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" right="10.0"/>
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="Graffiti2CTT" size="32.0"/>
+                                    </font>
+                                </Button>
+                                <Button id="clearButton" mnemonicParsing="false" onAction="#clearField"
+                                        prefHeight="35.0" prefWidth="125.0" stylesheets="@../../css/userSetMode.css">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" left="100.0" right="10.0"/>
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="Graffiti2CTT" size="32.0"/>
+                                    </font>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="40.0"/>
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                      minWidth="-Infinity" prefHeight="550.0" prefWidth="415.0">
+                    <children>
+                        <HBox prefHeight="200.0" prefWidth="415.0">
+                            <children>
+                                <Canvas fx:id="canvasHorizontalShips" height="170.0" width="170.0">
+                                    <HBox.margin>
+                                        <Insets/>
+                                    </HBox.margin>
+                                </Canvas>
+                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Text fx:id="lblH4" strokeType="OUTSIDE" strokeWidth="0.0" text="x1"
+                                              textAlignment="CENTER" wrappingWidth="33.13671875">
+                                            <font>
+                                                <Font size="23.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0"/>
+                                            </VBox.margin>
+                                        </Text>
+                                        <Text fx:id="lblH3" strokeType="OUTSIDE" strokeWidth="0.0" text="x1"
+                                              textAlignment="CENTER" wrappingWidth="33.13671875">
+                                            <font>
+                                                <Font size="23.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0"/>
+                                            </VBox.margin>
+                                        </Text>
+                                        <Text fx:id="lblH2" strokeType="OUTSIDE" strokeWidth="0.0" text="x1"
+                                              textAlignment="CENTER" wrappingWidth="33.13671875">
+                                            <font>
+                                                <Font size="23.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0"/>
+                                            </VBox.margin>
+                                        </Text>
+                                        <Text fx:id="lblH1" strokeType="OUTSIDE" strokeWidth="0.0" text="x1"
+                                              textAlignment="CENTER" wrappingWidth="33.13671875">
+                                            <font>
+                                                <Font size="23.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0"/>
+                                            </VBox.margin>
+                                        </Text>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets right="20.0"/>
+                                    </HBox.margin>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Canvas fx:id="canvasVerticalShips" height="170.0" width="170.0"/>
+                                        <Text fx:id="lblVertical" strokeType="OUTSIDE" strokeWidth="0.0"
+                                              text="x0   x0   x0   x0" wrappingWidth="163.13671875">
+                                            <font>
+                                                <Font size="23.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="10.0"/>
+                                            </VBox.margin>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="100.0"/>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="53.0"/>
+                            </VBox.margin>
+                        </HBox>
+                        <Label fx:id="lblInstructions" alignment="TOP_LEFT" prefHeight="184.0" prefWidth="394.0"
+                               text="Разместите корабли" textFill="RED">
+                            <font>
+                                <Font name="Graffiti2CTT" size="25.0"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets top="30.0"/>
+                            </VBox.margin>
+                        </Label>
+                        <Button id="cancelButton" cancelButton="true" mnemonicParsing="false" onAction="#cancelWindow"
+                                prefHeight="35.0" prefWidth="125.0" stylesheets="@../../css/userSetMode.css">
+                            <font>
+                                <Font name="Graffiti2CTT" size="32.0"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets right="150.0" top="20.0"/>
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="50.0"/>
+                    </HBox.margin>
+                </VBox>
+            </children>
+        </HBox>
+        <ImageView fx:id="shipImgView" fitHeight="160.0" fitWidth="160.0" mouseTransparent="true" pickOnBounds="true"
+                   preserveRatio="true"/>
+    </children>
+</AnchorPane>

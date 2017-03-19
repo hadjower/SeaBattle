@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="306.0" prefWidth="435.0" styleClass="gridpane" stylesheets="@../../css/shipsSetMode.css" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dudar.seabattle.controller.ShipsSetModeController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <VBox prefHeight="306.0" prefWidth="435.0">
+         <children>
+            <AnchorPane prefHeight="306.0" prefWidth="435.0">
+               <children>
+                  <Label text="Как хотите расставить корабли?">
+                     <font>
+                        <Font name="Graffiti2CTT" size="21.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutY="31.0" prefWidth="200.0" />
+                  <RadioButton id="userRbutton" fx:id="radioBtnUser" layoutX="10.0" layoutY="86.0" mnemonicParsing="false" onAction="#userSelected" prefHeight="35.0" prefWidth="127.0" stylesheets="@../../css/shipsSetMode.css" text="Вручную">
+                     <font>
+                        <Font name="Graffiti2CTT" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <Button id="buttonOK" fx:id="btnOK" defaultButton="true" layoutX="40.0" layoutY="239.0" mnemonicParsing="false" onAction="#isAutoMode" prefHeight="57.0" prefWidth="141.0" stylesheets="@../../css/shipsSetMode.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="160.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <RadioButton id="autoRbutton" fx:id="radioBtnAuto" layoutX="10.0" layoutY="44.0" mnemonicParsing="false" onAction="#autoSelected" prefHeight="27.0" prefWidth="176.0" stylesheets="@../../css/shipsSetMode.css" text="Автоматически">
+                     <font>
+                        <Font name="Graffiti2CTT" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <Button id="buttonCancel" fx:id="btnCancel" cancelButton="true" layoutX="254.0" layoutY="238.0" mnemonicParsing="false" onAction="#cancelWindow" prefHeight="57.0" prefWidth="141.0" stylesheets="@../../css/shipsSetMode.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="40.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

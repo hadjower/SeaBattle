@@ -1,0 +1,7 @@
+.gridpane{
+     -fx-background-image: url("/com/dudar/seabattle/pictures/gameWindow.jpg");
+     -fx-background-repeat: stretch;
+     -fx-background-size: 990 650;
+     -fx-background-position: bottom center;
+     -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+ }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane id="helpPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+          prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/helpAboutWindow.css"
+          xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.dudar.seabattle.controller.RulesWindowController">
+    <children>
+        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="/com/dudar/seabattle/pictures/battleship.png"/>
+            </image>
+            <FlowPane.margin>
+                <Insets left="15.0" top="30.0"/>
+            </FlowPane.margin>
+        </ImageView>
+        <Label prefHeight="150.0" prefWidth="425.0" text="&quot;Морской Бой&quot;" textFill="#1b10dd">
+            <font>
+                <Font name="Graffiti2CTT" size="48.0"/>
+            </font>
+            <FlowPane.margin>
+                <Insets left="5.0" top="10.0"/>
+            </FlowPane.margin>
+        </Label>
+        <Label fx:id="lblRules" alignment="TOP_LEFT" prefHeight="164.0" prefWidth="555.0">
+            <font>
+                <Font name="Comic Sans MS" size="18.0"/>
+            </font>
+            <FlowPane.margin>
+                <Insets left="35.0"/>
+            </FlowPane.margin>
+        </Label>
+        <AnchorPane prefHeight="50.0" prefWidth="599.0">
+            <children>
+                <Button id="buttonCancelHelp" cancelButton="true" defaultButton="true" mnemonicParsing="false"
+                        onAction="#closeWindow" prefHeight="50.0" prefWidth="140.0"
+                        stylesheets="@../../css/helpAboutWindow.css" AnchorPane.bottomAnchor="0.0"
+                        AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0"/>
+            </children>
+        </AnchorPane>
+    </children>
+</FlowPane>

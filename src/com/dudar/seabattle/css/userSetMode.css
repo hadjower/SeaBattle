@@ -1,0 +1,26 @@
+.anchorpane {
+    -fx-background-image: url("/com/dudar/seabattle/pictures/backgroundUserSetMode.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 960 560;
+    -fx-background-position: bottom left;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+
+#playButton {
+    -fx-background-image: url("/com/dudar/seabattle/pictures/buttons/buttonFight.png");
+    -fx-background-size: 125 60;
+    -fx-background-position: top left;
+}
+
+
+#clearButton {
+    -fx-background-image: url("/com/dudar/seabattle/pictures/buttons/buttonReset.png");
+    -fx-background-size: 125 60;
+    -fx-background-position: top left;
+}
+
+#cancelButton {
+    -fx-background-image: url("/com/dudar/seabattle/pictures/buttons/buttonCancel.png");
+    -fx-background-size: 125 60;
+    -fx-background-position: top left;
+}

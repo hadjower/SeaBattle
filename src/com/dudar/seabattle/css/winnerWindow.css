@@ -1,0 +1,19 @@
+.anchorpane{
+-fx-background-image: url("/com/dudar/seabattle/pictures/backgroundEnd.png");
+-fx-background-repeat: stretch;
+-fx-background-size: 682 369;
+-fx-background-position: top left;
+-fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+
+#buttonMenu {
+    -fx-background-image: url("/com/dudar/seabattle/pictures/buttons/buttonNo.png");
+    -fx-background-size: 160 50;
+    -fx-background-position: center center;
+}
+
+#buttonNew {
+    -fx-background-image: url("/com/dudar/seabattle/pictures/buttons/buttonYes.png");
+    -fx-background-size: 160 50;
+    -fx-background-position: center center;
+}

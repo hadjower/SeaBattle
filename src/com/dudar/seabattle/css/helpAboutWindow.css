@@ -1,0 +1,28 @@
+#aboutPane{
+    -fx-background-image: url("/com/dudar/seabattle/pictures/aboutPicture.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 510 170;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+
+#helpPane{
+    -fx-background-image: url("/com/dudar/seabattle/pictures/helpPicture.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 600 410;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+
+#buttonCancelHelp {
+    -fx-background-image: url("/com/dudar/seabattle/pictures/buttons/buttonCancel.png");
+    -fx-background-size: 140 50;
+    -fx-background-position: center center;
+}
+
+#buttonCancelAbout {
+    -fx-background-image: url("/com/dudar/seabattle/pictures/buttons/buttonCancel.png");
+    -fx-background-size: 108 39;
+    -fx-background-position: center center;
+}
+

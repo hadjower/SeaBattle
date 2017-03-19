@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane id="mainpane" fx:id="gridPane" alignment="center" hgap="10" styleClass="gridpane" stylesheets="@../../css/gameWindow.css" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dudar.seabattle.controller.GameWindowController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <VBox prefHeight="670.0" prefWidth="970.0">
+         <children>
+            <AnchorPane prefHeight="23.0" prefWidth="974.0">
+               <children>
+                  <MenuBar AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Игра">
+                        <items>
+                              <MenuItem mnemonicParsing="false" onAction="#startNewGame" text="Новая игра" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem mnemonicParsing="false" onAction="#exitToMainMenu" text="Главное меню" />
+                          <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="Выход" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Вид">
+                        <items>
+                              <Menu mnemonicParsing="false" text="Поле противника">
+                                 <items>
+                                    <RadioMenuItem fx:id="radioBtnViewMode" mnemonicParsing="false" onAction="#setEnemyFieldView" text="Открыто" />
+                                 </items>
+                              </Menu>
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Помощь">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#showGameRules" text="Правила игры" />
+                              <MenuItem mnemonicParsing="false" onAction="#showAbout" text="О программе" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="28.0" prefWidth="974.0">
+               <children>
+                  <Label text="МОЙ ФЛОТ">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="31.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="170.0" top="8.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="ФЛОТ ПРОТИВНИКА">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="31.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="320.0" top="8.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="43.0" prefWidth="1000.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A   Б   В   Г   Д   Е   Ж   З   И   К" wrappingWidth="414.205078125">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="55.0" right="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A   Б   В   Г   Д   Е   Ж   З   И   К" wrappingWidth="414.205078125">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="79.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="450.0" prefWidth="33.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="6" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="7" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="8" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="9" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <Canvas fx:id="canvasPlayerField" height="415.0" width="450.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Canvas>
+                  <VBox prefHeight="450.0" prefWidth="33.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="6" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="7" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="8" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="9" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="33.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <Canvas fx:id="canvasEnemyField" height="415.0" onMouseClicked="#doShoot" width="420.0" />
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="130.0" prefWidth="974.0">
+               <children>
+                  <TextArea fx:id="txtAreaPlayer1Field" editable="false" layoutX="126.0" prefHeight="120.0" prefWidth="322.0" />
+                  <TextArea fx:id="txtAreaPlayer2Field" editable="false" layoutX="520.0" prefHeight="120.0" prefWidth="329.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
